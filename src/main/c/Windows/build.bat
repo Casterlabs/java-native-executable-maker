@@ -1,0 +1,1 @@
+gcc executable.c -o jnem-helper.exe -lshlwapi -mwindows
