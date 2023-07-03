@@ -1,10 +1,12 @@
+// This file is used only on Windows.
+// See __jnem.c for Unix.
+
 #include <windows.h>
 #include <shlwapi.h>
 #include <stdio.h>
 #include <string.h>
 #include "./tiny-json.h"
 
-#define sizeofstr(s) (strlen(s) * sizeof(char))
 #define MAX_STRING_BUFFER 2048
 
 #define DEBUG 1

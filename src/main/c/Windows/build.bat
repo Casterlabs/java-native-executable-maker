@@ -1,1 +1,0 @@
-zig build-exe -target x86_64-windows-gnu -lshlwapi --subsystem windows -lc --name jnem-helper executable.c tiny-json.c
