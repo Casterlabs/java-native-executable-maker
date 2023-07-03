@@ -1,1 +1,1 @@
-gcc executable.c tiny-json.c -o jnem-helper.exe -lshlwapi -mwindows
+zig build-exe -target x86_64-windows-gnu -lshlwapi --subsystem windows -lc --name jnem-helper executable.c tiny-json.c

@@ -69,8 +69,12 @@ int RunCommand(char *to_execute)
     return exit_code;
 }
 
-int main(int argc, char **argv)
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
+    // Hide the command window
+    HWND hWnd = GetConsoleWindow();
+    ShowWindow(hWnd, SW_HIDE);
+
     char this_directory[MAX_STRING_BUFFER];
     // char *this_directory = calloc(MAX_STRING_BUFFER, sizeof(char));
     GetModuleFileName(NULL, this_directory, MAX_STRING_BUFFER);

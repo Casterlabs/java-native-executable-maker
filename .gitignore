@@ -11,3 +11,4 @@
 # Common
 target/
 *Test.java
+src/main/c/Windows/jnem-helper.pdb
