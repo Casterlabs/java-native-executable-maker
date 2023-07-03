@@ -27,6 +27,18 @@ mv intermediate.pdb dist/Windows-aarch64.pdb
 #                   Linux                   #
 # ----------------------------------------- #
 
+zig cc -target x86_64-linux -o intermediate __unix.c tiny-json.c
+mv intermediate dist/Linux-x86_64
+
+zig cc -target x86-linux -o intermediate __unix.c tiny-json.c
+mv intermediate dist/Linux-x86
+
+zig cc -target arm-linux-gnueabi -o intermediate __unix.c tiny-json.c
+mv intermediate dist/Linux-arm
+
+zig cc -target aarch64-linux -o intermediate __unix.c tiny-json.c
+mv intermediate dist/Linux-aarch64
+
 # ----------------------------------------- #
 #                   macOS                   #
 # ----------------------------------------- #
