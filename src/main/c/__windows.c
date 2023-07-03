@@ -85,9 +85,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     if (DEBUG)
         printf("[JNEM] Directory of .exe: %s\n", this_directory);
 
+    // Read the contents of "./program.json" into a buffer.
     char programjson_contents[MAX_STRING_BUFFER];
-
-    // Read the contents of "./program.json" into the above buffer.
     {
         char programjson_file_path[MAX_STRING_BUFFER];
         PathCombine(programjson_file_path, this_directory, "program.json");
@@ -227,17 +226,17 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
     strcat(full_command, java_command_args);
 
     // Append the command line arguments (if present)
-    char *raw_programjson_args = GetCommandLine();
-    char *first_space = strchr(raw_programjson_args, ' ');
+    char *raw_program_args = GetCommandLine();
+    char *first_space = strchr(raw_program_args, ' ');
 
     if (first_space != NULL)
     {
-        raw_programjson_args = first_space + 1;
+        raw_program_args = first_space + 1;
 
-        strcat(full_command, raw_programjson_args);
+        strcat(full_command, raw_program_args);
 
         if (DEBUG)
-            printf("[JNEM] Raw args: %s\n", raw_programjson_args);
+            printf("[JNEM] Raw args: %s\n", raw_program_args);
     }
 
     if (DEBUG)
