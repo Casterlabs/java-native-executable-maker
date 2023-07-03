@@ -1,0 +1,9 @@
+{
+    "classPath": [
+        "ExampleApp.jar"
+    ],
+    "mainClass": "com.example.jnem.ExampleApp",
+    "systemProperties": [
+        "-Dexample=123"
+    ]
+}

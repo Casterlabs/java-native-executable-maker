@@ -1,1 +1,1 @@
-gcc executable.c -o jnem-helper.exe -lshlwapi -mwindows
+gcc executable.c tiny-json.c -o jnem-helper.exe -lshlwapi -mwindows
