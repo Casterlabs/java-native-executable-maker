@@ -1,5 +1,5 @@
 // This file is used only on Windows.
-// See __jnem.c for Unix.
+// See __unix.c for Unix.
 
 #include <windows.h>
 #include <shlwapi.h>
@@ -7,7 +7,7 @@
 #include <string.h>
 #include "./tiny-json.h"
 
-#define MAX_STRING_BUFFER 2048
+#define MAX_STRING_BUFFER 8192
 
 #define DEBUG 1
 
